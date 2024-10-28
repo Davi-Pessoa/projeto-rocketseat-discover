@@ -8,7 +8,7 @@
   --text-color: white;
   --bg-url: url(./assets/bg-mobile.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
-  --surface-color: rgba(255, 255 , 255, 0.05);
+  --surface-color: rgba(255, 255, 255, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/MoonStars.svg);
@@ -16,9 +16,9 @@
 
 .ligth {
   --text-color: black;
- --bg-url: url(./assets/bg-mobile-light.jpg);
+  --bg-url: url(./assets/bg-mobile-light.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
-  --surface-color:rgba(0, 0, 0, 0.05);
+  --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(./assets/Sun.svg);
@@ -28,6 +28,7 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+  height: 100vh;
 }
 
 body * {
@@ -55,19 +56,18 @@ body * {
   font-weight: 500;
   line-height: 24px;
   margin-top: 8px;
- 
 }
 
 /*switch*/
-#switch{
+#switch {
   position: relative;
   width: 64px;
 
   margin: 0 auto;
-  padding: 4px auto ;
+  padding: 4px auto;
 }
 
-#switch button{
+#switch button {
   width: 32px;
   height: 32px;
   background: white var(--switch-bg-url) no-repeat center;
@@ -83,10 +83,9 @@ body * {
 
 .ligth #switch button {
   right: 0;
-  left:initial;
-
+  left: initial;
 }
-#switch span{
+#switch span {
   display: block;
   width: 64px;
   height: 24px;
@@ -136,13 +135,13 @@ ul li a:hover {
 }
 
 /* Social-links*/
-#social-link{
+#social-link {
   display: flex;
   justify-content: center;
 
   padding: 24px 0;
 
-font-size: 24px;
+  font-size: 24px;
 }
 
 #social-link a {
@@ -155,13 +154,23 @@ font-size: 24px;
   border-radius: 50%;
 }
 
-#social-link a:hover { 
+#social-link a:hover {
   background: var(--highlight-color);
 }
 
-
-footer{
-  padding: 24px 0 ;
+footer {
+  padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+/* media queries*/
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+
+  .ligth {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
